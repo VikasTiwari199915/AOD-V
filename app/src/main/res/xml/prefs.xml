@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceCategory
+    android:title="Clock">
+    <SwitchPreference
+        android:title="Clock enabled"
+        android:key="clock_enabled"/>
+    <ListPreference android:title="Clock font"
+        android:key="clock_font_list"
+        android:entryValues="@array/font_array"
+        android:entries="@array/font_array"
+        android:summary="Select a font for clock"/>
+    <ListPreference android:title="Font size"
+        android:summary="Select the clock font size"
+        android:defaultValue="18sp"/>
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:title="Select a color"
+        android:defaultValue="#FF0000"
+        app:showDialog="false"/>
+
+</PreferenceCategory>
+    <PreferenceCategory android:title="Date">
+        <SwitchPreference
+            android:title="Date enabled"
+            android:key="date_enabled"
+            android:summaryOn="Date will be shown on Ambient Display"
+            android:summaryOff="Date will be hidden on Ambient Display"
+            android:defaultValue="true"/>
+        <ListPreference
+            android:title="Date font"
+            android:key="date_font_list"
+            android:summary="Select a font for Date"/>
+        <ListPreference android:title="Font size"
+            android:summary="Select the date font size"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
